@@ -113,7 +113,7 @@ class ViewController: UIViewController {
     
     private func pauseAnimation() {
         let pausedTime = progressView.convertTime(CACurrentMediaTime(), from: nil)
-        progressView.speed = 0
+        progressView.speed = Float()
         progressView.timeOffset = pausedTime
     }
     
@@ -121,8 +121,8 @@ class ViewController: UIViewController {
         isPause.toggle()
         let pausedTime = progressView.timeOffset
         progressView.speed = 1
-        progressView.timeOffset = 0
-        progressView.beginTime = 0
+        progressView.timeOffset = CFTimeInterval()
+        progressView.beginTime = CFTimeInterval()
         let timeSincePause = progressView.convertTime(CACurrentMediaTime(), from: nil) - pausedTime
         progressView.beginTime = timeSincePause
     }
