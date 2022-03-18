@@ -129,10 +129,10 @@ class ViewController: UIViewController {
     
     private func checkState() -> (light: UIColor, dark: UIColor) {
         switch isWork {
-            case true:
-                return (light: .f6cfcb, dark: .f5cac5)
-            default:
-                return (light: .f3faf8, dark: .c5ec8a4)
+        case true:
+            return (light: .f6cfcb, dark: .f5cac5)
+        default:
+            return (light: .f3faf8, dark: .c5ec8a4)
         }
     }
     
